@@ -31,7 +31,7 @@ class imframe(Frame):
         self.ls_frame = Frame(self)
         # Load 
         def load_fn(callback):
-            file = filedialog.askopenfilename(initialdir='./',title = ' ',
+            file = filedialog.askopenfilename(initialdir='../',title = ' ',
                 filetypes = [('All', '*.*'),('JPG files', '*.jpg'),('PNG files', '*.png'),])
             if file != '':
                 self.update(Image.open(file))

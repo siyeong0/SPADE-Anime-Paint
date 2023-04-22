@@ -296,10 +296,11 @@ def get_transform(opt, params, method=Image.BICUBIC, normalize=True, toTensor=Tr
     return transforms.Compose(transform_list)
 
 def preprocess_input(opt, data):
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     # move to GPU and change data types
     data['label'] = data['label'].long()
-    data['label'] = data['label'].cuda()
-    data['image'] = data['image'].cuda()
+    data['label'] = data['label'].to(device)
+    data['image'] = data['image'].to(device)
 
     # create one-hot label map
     # Todo:
@@ -308,7 +309,7 @@ def preprocess_input(opt, data):
     bs, _, h, w = label_map.size()
     nc = opt.label_nc + 1 if opt.contain_dontcare_label \
         else opt.label_nc
-    input_label = torch.cuda.FloatTensor (bs, nc, h, w).zero_()
+    input_label = torch.FloatTensor (bs, nc, h, w).zero_().to(device)
     input_semantics = input_label.scatter_(1, label_map, 1.0)
 
     return input_semantics, data['image']
