@@ -52,7 +52,7 @@ class app(Tk):
         self.ref_dirty = False
         self.generator = gen_image()
         # Initialize window
-        self.title('Anime SPADE Drawer')
+        self.title('Sementic Segment To Anime Illust')
         #self.geometry("1600x1000+100+100")
         self.frame = Frame(self, highlightbackground='black', highlightthickness=2)
         # Make image frame
