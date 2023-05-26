@@ -9,33 +9,11 @@ import numpy as np
 from PIL import Image
 import os
 import argparse
-import dill as pickle
 import random
 import torchvision.transforms as transforms
 
 from networks.generator import SPADEGenerator
 from networks.encoder import ConvEncoder
-
-def save_obj(obj, name):
-    with open(name, 'wb') as f:
-        pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
-
-
-def load_obj(name):
-    with open(name, 'rb') as f:
-        return pickle.load(f)
-
-# returns a configuration for creating a generator
-# |default_opt| should be the opt of the current experiment
-# |**kwargs|: if any configuration should be overriden, it can be specified here
-
-
-def copyconf(default_opt, **kwargs):
-    conf = argparse.Namespace(**vars(default_opt))
-    for key in kwargs:
-        print(key, kwargs[key])
-        setattr(conf, key, kwargs[key])
-    return conf
 
 
 def tile_images(imgs, picturesPerRow=4):
