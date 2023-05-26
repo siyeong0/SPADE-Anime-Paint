@@ -3,10 +3,11 @@
 ## Demo
 
 ### Run .exe
-Download <a href="https://drive.google.com/file/d/1hhCZlwer5B-HZYv5uRJwSdJJvKDznVuA/view?usp=share_link">Demo</a></i> and please execute "ssti/ssti.exe"
+Download <a href="https://drive.google.com/file/d/1hhCZlwer5B-HZYv5uRJwSdJJvKDznVuA/view?usp=share_link">demo</a></i> and please execute "ssti/ssti.exe"
 
 Load the segment image to the left frmae, reference image to the middle frame; basic images are given in "resources" foloder. It will automatically generate the new illust.
 ### Run .py
+Download <a href="https://drive.google.com/file/d/1hr0ti1igKedEfObgHxwRVAat2vCo_fQh/view?usp=share_link">pretrained models</a></i> and copy "weights" folder to the root folder.
 ```bash
 pip install -r requirements.txt
 
