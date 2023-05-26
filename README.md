@@ -24,7 +24,7 @@ and generated the labels with <a href="https://github.com/siyeong0/Anime-Face-Se
 
 ![229331131-181bbe04-259f-4649-926c-c8916a5508e3](https://github.com/siyeong0/SSTI/assets/117014820/a3c18c75-4f17-4b2b-b0d1-05ea3c951701)
 
-## Model Config
+## Train
 
 It used <a href="https://github.com/NVlabs/SPADE">NVlabs SPADE</a></i>:.
 After copy the pretrained model from "ssti/weights/" folder, you can incrementally train new model with below command.
