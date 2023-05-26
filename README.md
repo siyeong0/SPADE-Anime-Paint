@@ -26,7 +26,7 @@ and generated the labels with <a href="https://github.com/siyeong0/Anime-Face-Se
 
 ## Train
 
-It used <a href="https://github.com/NVlabs/SPADE">NVlabs SPADE</a></i>:.
+It used <a href="https://github.com/NVlabs/SPADE">NVlabs SPADE</a></i>.
 After copy the pretrained model from "ssti/weights/" folder, you can incrementally train new model with below command.
 ```bash
 python train.py --name ssti --dataset_mode custom --label_dir datasets/anime/train_label/ --image_dir datasets/anime/train_img/ --no_instance --label_nc 7 --niter 8 --niter_decay 8 --batchSize 4 --display_freq 10000 --save_epoch_freq 1 --use_vae --continue_train
